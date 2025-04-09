@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site doaçao</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./assets/Logo.png" alt="Logo da organização de doações" width="40px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Transforme vidas com um gesto de amor</h1>
+        <p>Com a sua ajuda, podemos levar esperança e dignidade a quem mais precisa.</p>
+        <a href="#contato" class="btn">Quero ajudar agora</a>
+    </section>
+
+    <section id="sobre">
+        <h2>Quem somos</h2>
+        <p>Somos uma organização sem fins lucrativos dedicada a conectar pessoas dispostas a ajudar com comunidades em situação de vulnerabilidade. Acreditamos que todo gesto conta e que juntos podemos fazer a diferença.</p>
+    </section>
+
+    <section id="servicos">
+        <h2>Como Ajudar</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="icon"><img src="./assets/hand-holding-heart.png" width="24px" alt="Ícone de coração"></div>
+                <h3>Doações Financeiras</h3>
+                <p>Ajude com qualquer valor. Sua contribuição nos ajuda a comprar alimentos, roupas e itens essenciais.</p>
+            </div>
+            <div class="card">
+                <div class="icon"><img src="./assets/box.png" alt="Ícone de caixa"></div>
+                <h3>Doações de Itens</h3>
+                <p>Aceitamos roupas, alimentos, produtos de higiene e muito mais. Entre em contato para agendar a entrega.</p>
+            </div>
+            <div class="card">
+                <div class="icon"><img src="./assets/tools.png" alt="Ícone de ferramentas"></div>
+                <h3>Voluntariado</h3>
+                <p>Doe seu tempo e talento. Seja voluntário e participe das nossas ações sociais.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="form-doacao">
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" placeholder="Seu nome" required>
+            
+            <label for="email">Seu email</label>
+            <input type="email" id="email" placeholder="Seu email" required>
+            
+            <label for="mensagem">Mensagem de apoio</label>
+            <textarea id="mensagem" placeholder="Mensagem de apoio"></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section id="doacoes">
+        <h2>Últimas Doações</h2>
+        <ul id="lista-doacoes"></ul>
+    </section>
+
+    <section id="cadastro">
+        <h2>Cadastro</h2>
+        <form id="form-cadastro">
+            <label for="cad-nome">Nome</label>
+            <input type="text" id="cad-nome" placeholder="Nome" required>
+
+            <label for="cad-email">Email</label>
+            <input type="email" id="cad-email" placeholder="Email" required>
+
+            <label for="cad-senha">Senha</label>
+            <input type="password" id="cad-senha" placeholder="Senha" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+    
+    <section id="login">
+        <h2>Login</h2>
+        <form id="form-login">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" placeholder="Email" required>
+            
+            <label for="login-senha">Senha</label>
+            <input type="password" id="login-senha" placeholder="Senha" required>
+            
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="msg-login"></p>
+    </section>
+    
+    <section id="cadastro-instituicao">
+        <h2>Cadastro de Instituição</h2>
+        <form id="form-cadastro-instituicao">
+            <label for="inst-nome">Nome da instituição</label>
+            <input type="text" id="inst-nome" placeholder="Nome da instituição" required>
+            
+            <label for="inst-email">Email</label>
+            <input type="email" id="inst-email" placeholder="Email" required>
+            
+            <label for="inst-senha">Senha</label>
+            <input type="password" id="inst-senha" placeholder="Senha" required>
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+    
+    <section id="login-instituicao">
+        <h2>Login de Instituição</h2>
+        <form id="form-login-instituicao">
+            <label for="login-inst-email">Email</label>
+            <input type="email" id="login-inst-email" placeholder="Email" required>
+            
+            <label for="login-inst-senha">Senha</label>
+            <input type="password" id="login-inst-senha" placeholder="Senha" required>
+            
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="msg-login-inst"></p>
+    </section>
+
+    <section id="adicionar-alimento">
+        <h2>Adicionar Alimento a uma Doação</h2>
+        <form id="form-alimento">
+            <label for="doacao-id">ID da doação</label>
+            <input type="number" id="doacao-id" placeholder="ID da doação" required>
+            
+            <label for="tipo-alimento">Tipo de alimento</label>
+            <input type="text" id="tipo-alimento" placeholder="Tipo de alimento" required>
+            
+            <label for="validade-alimento">Validade</label>
+            <input type="date" id="validade-alimento" required>
+            
+            <label for="fabricacao-alimento">Fabricação</label>
+            <input type="date" id="fabricacao-alimento" required>
+            
+            <label for="quantidade-alimento">Quantidade</label>
+            <input type="number" id="quantidade-alimento" placeholder="Quantidade" required>
+            
+            <button type="submit">Adicionar Alimento</button>
+        </form>
+    </section>
+
+    <section id="ver-alimentos">
+        <h2>Ver Alimentos de uma Doação</h2>
+        <form id="form-ver-alimentos">
+            <label for="ver-doacao-id">ID da doação</label>
+            <input type="number" id="ver-doacao-id" placeholder="ID da doação" required>
+            
+            <button type="submit">Ver Alimentos</button>
+        </form>
+        <ul id="lista-alimentos"></ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Doe Esperança. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./javinha.js"></script>
+</body>
+</html>
